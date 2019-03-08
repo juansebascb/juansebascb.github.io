@@ -21,8 +21,8 @@ keys.addEventListener('click', e => {
 
         if (!action) {
 
-            if (display.value === '0' || previousKeyType === 'function'){
-                if (previousKeyType === 'function') {
+            if (display.value === '0' || previousKeyType === 'function' || previousKeyType === 'equals'){
+                if (previousKeyType === 'function' || previousKeyType === 'equals') {
                     calculator.dataset.previousKeyType = '';
                 }
 
@@ -49,7 +49,7 @@ keys.addEventListener('click', e => {
             case 'subtract':
             case 'multiply':
             case 'divide':
-                if (calculator.dataset.firstValue) {
+                if (calculator.dataset.firstValue && calculator.dataset.previousKeyType != 'function') {
                     calculate();
                 }
                 key.classList.add('pendingFunction');
@@ -82,6 +82,7 @@ keys.addEventListener('click', e => {
                 break;
             case 'equals':
                 if (calculator.dataset.firstValue) {
+                    calculator.dataset.previousKeyType = 'equals';
                     calculate();
                 }
         }
