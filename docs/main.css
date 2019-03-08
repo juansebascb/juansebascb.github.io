@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+body {
+    font: 25px "Arial Black", Arial, Sans-Serif; 
+}
+p {
+    font-size: 18px;
+}
+button {
+    color: black;
+    text-decoration: none; 
+    outline: none; 
+}
+#calculator {
+    width: 266px; 
+    height: 400px; 
+    background-color:transparent;
+    position: relative;
+}
+.numpad {
+	width: 202px; 
+    height: 324px; 
+    background-color:rgba(201,201,201,0.5); 
+    top: 67px; 
+    left: 15px;
+    position: absolute; 
+    border:solid #FFC100; 
+    border-radius:0px 0px 25px 25px;
+}
+#display {
+    background:rgba(181,238, 249, 0.95); 
+    border:solid #FFC100; 
+    border-radius:25px 25px 0 0; 
+    position: absolute;  
+    top: 15px; 
+    left: 15px; 
+    width: 197px; 
+    text-align: right; 
+    padding-right:5px;
+    font: 35px "Arial Black", Arial, Sans-Serif;
+}
+.num-button {
+    width: 40px; 
+    height: 40px; 
+    padding: 3px 0 0 0; 
+    text-align: center;  
+    border-radius: 50%;
+    background-image: -webkit-radial-gradient(45px 45px, circle cover, gray, white);
+    background-image: -moz-radial-gradient(45px 45px, circle cover, gray, white);
+    background-image: radial-gradient(45px 45px, circle cover, gray, white);
+    position: absolute;  
+}
+.memory-button {
+    width: 60px;
+    height: 40px;
+    padding: 3px 0 0 0;
+    text-align: center;
+    border-radius: 50%;
+    background-image: -webkit-radial-gradient(45px 45px, circle cover, gray, white);
+    background-image: -moz-radial-gradient(45px 45px, circle cover, gray, white);
+    background-image: radial-gradient(45px 45px, circle cover, gray, white);
+    position: absolute;
+}
+.zero-button {
+    width: 90px; 
+    height: 40px;
+    padding: 3px 0 0 0; 
+    text-align: center;  
+    border-radius: 25px;
+    background-image: -webkit-radial-gradient(45px 45px, circle cover, gray, white);
+    background-image: -moz-radial-gradient(45px 45px, circle cover, gray, white);
+    background-image: radial-gradient(45px 45px, circle cover, gray, white);
+    position: absolute;
+}
+.clear-button {
+    width: 40px; 
+    height: 40px; 
+    padding: 3px 0 0 0; 
+    text-align: center;  
+    border-radius: 50%;
+    color: firebrick;
+    background-image: -webkit-radial-gradient(45px 45px, circle cover, gray, white);
+    background-image: -moz-radial-gradient(45px 45px, circle cover, gray, white);
+    background-image: radial-gradient(45px 45px, circle cover, gray, white);
+    position: absolute; 
+}
+.function-button {
+    width: 40px; 
+    height: 40px; 
+    padding: 3px 0 0 0; 
+    text-align: center;  
+    border-radius: 50%;
+    background-image: -webkit-radial-gradient(45px 45px, circle cover, red, orange);
+    background-image: -moz-radial-gradient(45px 45px, circle cover, red, orange);
+    background-image: radial-gradient(45px 45px, circle cover, red, orange);
+    position: absolute; 
+}
+.plusminus-button {
+    width: 40px; 
+    height: 40px; 
+    padding: 3px 0 0 0; 
+    text-align: center;  
+    border-radius: 50%;
+    background-image: -webkit-radial-gradient(45px 45px, circle cover, gray, lightskyblue);
+    background-image: -moz-radial-gradient(45px 45px, circle cover, gray, lightskyblue);
+    background-image: radial-gradient(45px 45px, circle cover, gray, lightskyblue);
+    position: absolute; 
+}
+.percent-button   {
+    width: 40px; 
+    height: 40px; 
+    padding: 3px 0 0 0; 
+    text-align: center;  
+    border-radius: 50%;
+    background-image: -webkit-radial-gradient(45px 45px, circle cover, gray, lightskyblue);
+    background-image: -moz-radial-gradient(45px 45px, circle cover, gray, lightskyblue);
+    background-image: radial-gradient(45px 45px, circle cover, gray, lightskyblue);
+    position: absolute; 
+}
+.function-button:active, .pendingFunction {
+    background-image: -webkit-radial-gradient(45px 45px, circle cover, purple, red); 
+}
+.equals-button {
+    width: 40px; 
+    height: 40px; 
+    top: 338px; 
+    left: 176px;
+    padding: 3px 0 0 0; 
+    text-align: center;  
+    border-radius: 50%;
+    background-image: -webkit-radial-gradient(45px 45px, circle cover, orange, yellow);
+    background-image: -moz-radial-gradient(45px 45px, circle cover, orange, yellow);
+    background-image: radial-gradient(45px 45px, circle cover, orange, yellow);
+    position: absolute; 
+}
+.seven {
+    top: 185px; 
+    left: 22px; 
+}
+.eight {
+    top: 185px; 
+    left: 72px; 
+}
+.nine {
+    top: 185px; 
+    left: 125px; 
+}
+.four {
+    top: 236px; 
+    left: 22px; 
+}
+.five {
+    top: 236px; 
+    left: 72px; 
+}
+.six {
+    top: 236px; 
+    left: 125px; 
+}
+.one {
+    top: 287px; 
+    left: 22px; 
+}
+.two {
+    top: 287px; 
+    left: 72px; 
+}
+.three {
+    top: 287px; 
+    left: 125px; 
+}
+.zero {
+    top: 338px; 
+    left: 22px; 
+}
+.dot {
+    top: 338px; 
+    left: 125px; 
+}
+.clear-button {
+    top: 134px;
+    left: 22px;
+}
+.divide	{
+    top: 134px; 
+    left: 176px; 
+}
+.multiply {
+    top: 185px; 
+    left: 176px; 
+}
+.add {
+    top: 236px; 
+    left: 176px; 
+}
+.subtract {
+    top: 287px; 
+    left: 176px; 
+}
+.percent {
+    top: 134px; 
+    left: 125px; 
+}
+.plusminus {
+    top: 134px; 
+    left: 73px; 
+}
+.memory-button {
+    top: 80px;
+    left: 22px;
+}
+.recall {
+    top: 80px;
+    left: 90px;
+}
+.save {
+    top: 80px;
+    left: 157px;
+    background-image: -webkit-radial-gradient(45px 45px, circle cover, green, yellow);
+    background-image: -moz-radial-gradient(45px 45px, circle cover, green, yellow);
+    background-image: radial-gradient(45px 45px, circle cover, green, yellow);
+}
+.somethingSaved {
+    background-image: -webkit-radial-gradient(45px 45px, circle cover, green, yellow);
+}
