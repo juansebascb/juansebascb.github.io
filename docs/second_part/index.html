@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Calculator</title>
+        <link type="text/css" rel="stylesheet" href="main.css" />
+        <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <h3>Calculator Application</h3>
+        <p>This is a simple calculator application.</p>
+        <hr />
+        <div id="calculator">
+            <div class="numpad"></div>
+
+            <input type="text" id="display" value="0" disabled>
+            
+            <div class="pressable">
+
+                <button class="num-button seven">7</button>
+                <button class="num-button eight">8</button>
+                <button class="num-button nine">9</button>
+
+                <button class="num-button four">4</button>
+                <button class="num-button five">5</button>
+                <button class="num-button six">6</button>
+
+                <button class="num-button one">1</button>
+                <button class="num-button two">2</button>
+                <button class="num-button three">3</button>
+
+                <button class="num-button zero-button zero">0</button>
+                <button class="num-button dot">.</button>
+                <button class="clear-button clear" data-action="clear">C</button>
+
+                <button class="function-button divide" data-action="divide">&#247;</button>
+                <button class="function-button multiply" data-action="multiply">x</button>
+                <button class="function-button add" data-action="add">+</button>
+                <button class="function-button subtract" data-action="subtract">&#8722;</button>
+
+                <button class="percent-button percent" data-action="percent">%</button>
+                <button class="plusminus-button plusminus" data-action="plusminus">&#177;</button>
+                <button class="memory-button save" data-action="save">MS</button>
+                <button class="memory-button cleared" data-action="cleared">MC</button>
+                <button class="memory-button recall" data-action="recall">MR</button>
+
+                <button class="equals-button" data-action="equals">=</button>
+            </div>
+        </div>
+        <div id="history">
+            <button class="clear-history-button" onclick="history.clearHistory()">Clear</button>
+        </div>
+
+        <script type="text/javascript" src="main.js"></script> 
+    </body>
+</html>
+
