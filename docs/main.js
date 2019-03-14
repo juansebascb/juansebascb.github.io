@@ -178,8 +178,6 @@ function clear() {
 window.addEventListener ('keypress', e => {
     console.log(e.keyCode);
     switch (e.keyCode) {
-        case 47:
-            document.getElementById('%').click();
         case 46:
             document.getElementById('.').click();
             break;
