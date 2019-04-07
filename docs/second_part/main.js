@@ -117,8 +117,7 @@ keys.addEventListener('click', e => {
                 if (key.classList[1] == 'divide') {
                     document.getElementById('/').style.backgroundImage = "-webkit-radial-gradient(45px 45px, circle cover, purple, red)";
                 }
-                
-                console.log(key.classList);
+
                 decimalPressed = false;
                 calculator.dataset.previousKeyType = 'function';
                 calculator.dataset.firstValue = display.value;

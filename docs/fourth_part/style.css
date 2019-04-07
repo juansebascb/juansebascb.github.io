@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+  
+html {
+      font-size: 1em;
+}
+  
+body {
+    line-height: 1.625;
+}
+  
+h3, p, div {
+    text-align: center;
+}
+  
+h3 {
+    text-transform: capitalize;
+}
+  
+button {
+    display: block;
+    margin: 15px auto;
+}
+  
+#bio {
+    max-width: 70%;
+    margin: 15px auto;
+    padding: 10px;
+}
+img {
+    width: 50vw;
+}
