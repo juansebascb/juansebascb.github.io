@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+  
+html {
+      font-size: 1em;
+}
+  
+body {
+    line-height: 1.625;
+}
+  
+h3, p, div {
+    text-align: center;
+}
+  
+h3 {
+    text-transform: capitalize;
+}
+  
+button {
+    display: block;
+    margin: 15px auto;
+}
+img {
+    height: 25vh;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+#f1_container {
+    position: relative;
+    margin: 10px auto;
+    width: 100vw;
+    height: 25vh;
+    z-index: 1;
+}
+#f1_container {
+    perspective: 1000;
+}
+#f1_card, #f2_card, #f3_card {
+    width: 50%;
+    height: 100%;
+    margin-left: 25vw;
+    transform-style: preserve-3d;
+    transition: all 1.0s linear;
+}
+#f1_container:hover #f1_card, #f1_container:hover #f2_card, #f1_container:hover #f3_card {
+    transform: rotateY(180deg);
+    box-shadow: -5px 5px 5px #aaa;
+}
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.face.back {
+    display: block;
+    transform: rotateY(180deg);
+    box-sizing: border-box;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    background-color: #aaa;
+}
+
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 33%; 
+    }
+  
+    75% {
+        margin-left: 25%;
+        width: 66%;
+    }
+  
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
