@@ -1,7 +1,7 @@
 const calculator = document.getElementById('calculator');
 const keys = calculator.querySelector('.pressable');
 const display = calculator.querySelector('#display');
-const memoryRecall = keys.querySelector('.recall');
+const memoryRecall = document.getElementById('recall');
 
 decimalPressed = false;
 
@@ -49,7 +49,7 @@ let history = {
 }
 
 if (localStorage.getItem("MS")) {
-    memoryRecall.classList.add('somethingSaved');
+    memoryRecall.style.backgroundImage = "-webkit-radial-gradient(45px 45px, circle cover, green, yellow)";
 }
 
 if (localStorage.getItem("pastHistory")) {
@@ -64,8 +64,10 @@ keys.addEventListener('click', e => {
         const action = key.dataset.action;
         const keyContent = key.textContent;
 
-        Array.from(key.parentNode.children)
-            .forEach(k => k.classList.remove('pendingFunction'));
+        document.getElementById('/').style.backgroundImage = "-webkit-radial-gradient(45px 45px, circle cover, red, orange)";
+        document.getElementById('*').style.backgroundImage = "-webkit-radial-gradient(45px 45px, circle cover, red, orange)";
+        document.getElementById('-').style.backgroundImage = "-webkit-radial-gradient(45px 45px, circle cover, red, orange)";
+        document.getElementById('+').style.backgroundImage = "-webkit-radial-gradient(45px 45px, circle cover, red, orange)";
 
         const previousKeyType = calculator.dataset.previousKeyType;
 
@@ -102,7 +104,21 @@ keys.addEventListener('click', e => {
                 if (calculator.dataset.firstValue && calculator.dataset.previousKeyType != 'function') {
                     calculate();
                 }
-                key.classList.add('pendingFunction');
+
+                if (key.classList[1] == 'add') {
+                    document.getElementById('+').style.backgroundImage = "-webkit-radial-gradient(45px 45px, circle cover, purple, red)";
+                }
+                if (key.classList[1] == 'multiply') {
+                    document.getElementById('*').style.backgroundImage = "-webkit-radial-gradient(45px 45px, circle cover, purple, red)";
+                }
+                if (key.classList[1] == 'subtract') {
+                    document.getElementById('-').style.backgroundImage = "-webkit-radial-gradient(45px 45px, circle cover, purple, red)";
+                }
+                if (key.classList[1] == 'divide') {
+                    document.getElementById('/').style.backgroundImage = "-webkit-radial-gradient(45px 45px, circle cover, purple, red)";
+                }
+                
+                console.log(key.classList);
                 decimalPressed = false;
                 calculator.dataset.previousKeyType = 'function';
                 calculator.dataset.firstValue = display.value;
@@ -119,11 +135,11 @@ keys.addEventListener('click', e => {
                 break;
             case 'save':
                 localStorage.setItem("MS", display.value);
-                memoryRecall.classList.add('somethingSaved');
+                memoryRecall.style.backgroundImage = "-webkit-radial-gradient(45px 45px, circle cover, green, yellow)";
                 break;
             case 'cleared':
                 localStorage.setItem("MS", "");
-                memoryRecall.classList.remove('somethingSaved');
+                memoryRecall.style.backgroundImage = "-webkit-radial-gradient(45px 45px, circle cover, gray, white)";
                 break;
             case 'recall':
                 if (localStorage.getItem("MS")) {
