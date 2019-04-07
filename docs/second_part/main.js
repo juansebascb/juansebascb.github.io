@@ -139,6 +139,61 @@ keys.addEventListener('click', e => {
     }
 });
 
+window.addEventListener ('keypress', e => {
+    console.log(e.keyCode);
+    switch (e.keyCode) {
+        case 46:
+            document.getElementById('.').click();
+            break;
+        case 13:
+        case 61:
+            document.getElementById('equals').click();
+            break;
+        case 47:
+            document.getElementById('/').click();
+            break;
+        case 42:
+            document.getElementById('*').click();
+            break;
+        case 45:
+            document.getElementById('-').click();
+            break;
+        case 43:
+            document.getElementById('+').click();
+            break;
+        case 57:
+            document.getElementById('9').click();
+            break;
+        case 56:
+            document.getElementById('8').click();
+            break;
+        case 55:
+            document.getElementById('7').click();
+            break;
+        case 54:
+            document.getElementById('6').click();
+            break;
+        case 53:
+            document.getElementById('5').click();
+            break;
+        case 48:
+            document.getElementById('0').click();
+            break;
+        case 49:
+            document.getElementById('1').click();
+            break;
+        case 50:
+            document.getElementById('2').click();
+            break;
+        case 51:
+            document.getElementById('3').click();
+            break;
+        case 52:
+            document.getElementById('4').click();
+            break;
+    };
+});
+
 function calculate() {
     str = "";
 
